@@ -1,7 +1,12 @@
-package com.example.pimp_my_car.client.produit;
+package com.example.pimp_my_car.produit;
 
+import javax.persistence.*;
+
+@Entity
 public class Produit {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer idProduit;
 
     private String nomProduit;

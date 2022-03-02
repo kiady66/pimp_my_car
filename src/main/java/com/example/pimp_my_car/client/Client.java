@@ -1,16 +1,22 @@
 package com.example.pimp_my_car.client;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table
 public class Client {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer idClient;
+    @SequenceGenerator(
+            name = "client_sequence",
+            sequenceName = "client_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "client_sequence"
+    )
+    private Long idClient;
 
     private String nomClient;
 
@@ -24,7 +30,7 @@ public class Client {
 
     public Client(){}
 
-    public Client(Integer id, String nomClient, String prenomClient,
+    public Client(Long id, String nomClient, String prenomClient,
                   String emailClient, String mdpClient, Integer idContrat)
     {
         this.idClient = id;
@@ -35,10 +41,10 @@ public class Client {
         this.idContrat = idContrat;
     }
 
-    public void setIdClient(Integer id) {
+    public void setIdClient(Long id) {
         this.idClient = id;
     }
-    public Integer getIdClient() {
+    public Long getIdClient() {
         return this.idClient;
     }
 
