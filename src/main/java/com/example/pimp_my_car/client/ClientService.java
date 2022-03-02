@@ -10,12 +10,6 @@ public class ClientService {
     public List<Client> getClient()
     {
         return List.of(
-                new Client(
-                        0,
-                        "Kiady",
-                        "Raveloson",
-                        4
-                )
         );
     }
 }

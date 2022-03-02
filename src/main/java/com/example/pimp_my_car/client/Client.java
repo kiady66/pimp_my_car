@@ -10,58 +10,85 @@ public class Client {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer id;
+    private Integer idClient;
 
-    private String firstName;
+    private String nomClient;
 
-    private String lastName;
+    private String prenomClient;
 
-    private Integer contractId;
+    private String emailClient;
+
+    private String mdpClient;
+
+    private Integer idContrat;
 
     public Client(){}
 
-    public Client(Integer id, String firstName, String lastName, Integer contractId)
+    public Client(Integer id, String nomClient, String prenomClient,
+                  String emailClient, String mdpClient, Integer idContrat)
     {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.contractId = contractId;
+        this.idClient = id;
+        this.nomClient = nomClient;
+        this.prenomClient = prenomClient;
+        this.emailClient = emailClient;
+        this.mdpClient = mdpClient;
+        this.idContrat = idContrat;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setIdClient(Integer id) {
+        this.idClient = id;
     }
-    public Integer getId() {
-        return id;
-    }
-
-    public void setFirstName(String firstName)
-    {
-        this.firstName = firstName;
+    public Integer getIdClient() {
+        return this.idClient;
     }
 
-    public String getFirstName()
+    public void setNomClient(String nomClient)
     {
-        return this.firstName;
+        this.nomClient = nomClient;
     }
 
-    public void setLastName(String lastName)
+    public String getNomClient()
     {
-        this.lastName = lastName;
+        return this.nomClient;
     }
 
-    public String getLastName()
+    public void setPrenomClient(String prenomClient)
     {
-        return this.lastName;
+        this.prenomClient = prenomClient;
     }
 
-    public void setContractId(Integer contractId)
+    public String getPrenomClient()
     {
-        this.contractId = contractId;
+        return this.prenomClient;
     }
 
-    public Integer getContractId()
+    public void setIdContrat(Integer idContrat)
     {
-        return this.contractId;
+        this.idContrat = idContrat;
+    }
+
+    public Integer getIdContrat()
+    {
+        return this.idContrat;
+    }
+
+    public void setEmailClient(String emailClient)
+    {
+        this.emailClient = emailClient;
+    }
+
+    public String getEmailClient()
+    {
+        return this.emailClient;
+    }
+
+    public void setMdpClient(String mdpClient)
+    {
+        this.mdpClient = mdpClient;
+    }
+
+    public String getMdpClient()
+    {
+        return this.mdpClient;
     }
 }
