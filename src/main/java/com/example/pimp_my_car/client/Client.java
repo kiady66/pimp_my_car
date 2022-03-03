@@ -30,10 +30,9 @@ public class Client {
 
     public Client(){}
 
-    public Client(Long id, String nomClient, String prenomClient,
+    public Client(String nomClient, String prenomClient,
                   String emailClient, String mdpClient, Integer idContrat)
     {
-        this.idClient = id;
         this.nomClient = nomClient;
         this.prenomClient = prenomClient;
         this.emailClient = emailClient;
