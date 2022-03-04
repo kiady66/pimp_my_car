@@ -1,11 +1,9 @@
 package com.example.pimp_my_car.contrat;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table
 public class Contrat {
 
     @Id
@@ -16,8 +14,7 @@ public class Contrat {
 
     private Integer margeContrat;
 
-    public Contrat(Integer idContrat, String nomContrat, Integer margeContrat) {
-        this.idContrat = idContrat;
+    public Contrat(String nomContrat, Integer margeContrat) {
         this.nomContrat = nomContrat;
         this.margeContrat = margeContrat;
     }

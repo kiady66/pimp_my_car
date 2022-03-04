@@ -3,6 +3,7 @@ package com.example.pimp_my_car.produit;
 import javax.persistence.*;
 
 @Entity
+@Table
 public class Produit {
 
     @Id
@@ -13,8 +14,7 @@ public class Produit {
 
     private Float prixProduit;
 
-    public Produit(Integer idProduit, String nomProduit, Float prixProduit) {
-        this.idProduit = idProduit;
+    public Produit(String nomProduit, Float prixProduit) {
         this.nomProduit = nomProduit;
         this.prixProduit = prixProduit;
     }
