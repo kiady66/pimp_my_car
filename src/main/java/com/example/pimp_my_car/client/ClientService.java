@@ -78,7 +78,8 @@ public class ClientService {
                 {
                     Produit produitCourant = produitListIterator.next();
                     double prix = produitCourant.getPrixProduit()
-                            + (produitCourant.getPrixProduit() * (contrat.getMargeContrat() / 100));
+                            + (produitCourant.getPrixProduit() * (contrat.getMargeContrat() / 100)
+                            + (produitCourant.getPrixProduit() * 0.20));
 
                     response.put(produitCourant.getNomProduit(), String.valueOf(prix));
                 }
