@@ -1,8 +1,11 @@
 package com.example.pimp_my_car.client;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Component
 @Entity
 @Table
 public class Client {
