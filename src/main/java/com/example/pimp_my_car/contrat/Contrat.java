@@ -7,14 +7,14 @@ import javax.persistence.*;
 public class Contrat {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer idContrat;
 
     private String nomContrat;
 
-    private Integer margeContrat;
+    private double margeContrat;
 
-    public Contrat(String nomContrat, Integer margeContrat) {
+    public Contrat(Integer idContrat, String nomContrat, double margeContrat) {
+        this.idContrat = idContrat;
         this.nomContrat = nomContrat;
         this.margeContrat = margeContrat;
     }
@@ -42,7 +42,7 @@ public class Contrat {
         return nomContrat;
     }
 
-    public Integer getMargeContrat() {
+    public double getMargeContrat() {
         return margeContrat;
     }
 }

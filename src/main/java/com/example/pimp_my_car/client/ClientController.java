@@ -43,8 +43,9 @@ public class ClientController {
 
         while (produitListIterator.hasNext())
         {
-            htmlTab = htmlTab + "<tr><td>" + produitListIterator.next().getNomProduit()
-                    + "</td>" + "<td>" + produitListIterator.next().getPrixProduit() + "</td></tr>";
+            Produit produit = produitListIterator.next();
+            htmlTab = htmlTab + "<tr><td>" + produit.getNomProduit()
+                    + "</td>" + "<td>" + produit.getPrixProduit() + "</td></tr>";
         }
 
 
@@ -53,7 +54,6 @@ public class ClientController {
                     "table,tr,th,td{border:1px solid #cccccc}\n" +
                     "</style> </header>\n" +
                     "<body>\n"
-                        + "Hello world\n"
                         + "<table> "
                             + "<thead>"
                                 + "<tr>"
@@ -62,10 +62,7 @@ public class ClientController {
                                 + "</tr>"
                             + "</thead>"
                             + "<tbody>"
-                                + "<tr>"
-                                    + "<td> Nom produit </td>"
-                                    + "<td> Prix produit </td>"
-                                + "</tr>"
+                                + htmlTab
                             + "</tbody>"
                         + "</table>" +
                     "</body>\n" +
@@ -73,9 +70,25 @@ public class ClientController {
     }
 
     @RequestMapping(path = "api/v1/client/authentication")
-    public Map<String, String> authentication(@RequestBody Client client)
+    public Map<String, String> authentication(@RequestBody Map<String, String> data)
     {
-        return clientService.authentication(client);
+        return clientService.authentication(data);
+    }
+
+    @RequestMapping(
+            value = "process",
+            method = RequestMethod.POST)
+    public void test(@RequestBody Map<String, String> data)
+    {
+        System.out.println(data);
+    }
+
+    @RequestMapping(
+            value = "api/v1/client/produit",
+            method = RequestMethod.POST)
+    public Map<String, String> getProduit(@RequestBody Map<String, String> data)
+    {
+        return clientService.dashboard(data);
     }
 
     @RequestMapping(path = "api/v1/client")

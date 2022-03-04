@@ -1,6 +1,7 @@
 package com.example.pimp_my_car.client;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table
@@ -27,6 +28,10 @@ public class Client {
     private String mdpClient;
 
     private Integer idContrat;
+
+    private String accessToken;
+
+    private LocalDateTime expirationDate;
 
     public Client(){}
 
@@ -95,5 +100,22 @@ public class Client {
     public String getMdpClient()
     {
         return this.mdpClient;
+    }
+    public String getAccessToken()
+    {
+        return this.accessToken;
+    }
+
+    public void setAccessToken(String accessToken)
+    {
+        this.accessToken = accessToken;
+    }
+
+    public LocalDateTime getExpirationDate() {
+        return expirationDate;
+    }
+
+    public void setExpirationDate(LocalDateTime expirationDate) {
+        this.expirationDate = expirationDate;
     }
 }

@@ -28,175 +28,151 @@ public class ClientConfig {
                                     "rmacgauhy0@tumblr.com",
                                     "test",
                                     1
-                            ),
+                                    ),
                             new Client (
                                     "Feather",
                                     "Lil",
                                     "lfeather1@mit.edu",
                                     "test",
-                                    2
-                            ),
+                                    2),
                             new Client (
                                     "Djordjevic",
                                     "Isak",
                                     "idjordjevic2@xing.com",
                                     "test",
-                                    3
-                            ),
+                                    3),
                             new Client (
                                     "Chardin",
                                     "Myranda",
                                     "mchardin3@google.com.au",
                                     "test",
-                                    4
-                            ),
+                                    4),
                             new Client (
                                     "Rubinowitz",
                                     "Koressa",
                                     "krubinowitz4@homestead.com",
                                     "test",
-                                    0
-                            ),
+                                    0),
                             new Client (
                                     "Le Grice",
                                     "Joshua",
                                     "jlegrice5@blogs.com",
                                     "test",
-                                    1
-                            ),
+                                    1),
                             new Client (
                                     "Goaley",
                                     "Erda",
                                     "egoaley6@vkontakte.ru",
                                     "test",
-                                    2
-                            ),
+                                    2),
                             new Client (
                                     "Mounter",
                                     "Hilliard",
                                     "hmounter7@w3.org",
                                     "test",
-                                    3
-                            ),
+                                    3),
                             new Client (
                                     "Gerrell",
                                     "Britt",
                                     "bgerrell8@harvard.edu",
                                     "test",
-                                    4
-                            ),
+                                    4),
                             new Client (
                                     "Littrell",
                                     "Corrie",
                                     "clittrell9@nifty.com",
                                     "test",
-                                    0
-                            ),
+                                    0),
                             new Client (
                                     "Apfelmann",
                                     "Herby",
                                     "hapfelmanna@friendfeed.com",
                                     "test",
-                                    1
-                            ),
+                                    1),
                             new Client (
                                     "Boskell",
                                     "Brodie",
                                     "bboskellb@yolasite.com",
                                     "test",
-                                    2
-                            ),
+                                    2),
                             new Client (
                                     "Tummond",
                                     "Gavan",
                                     "gtummondc@nbcnews.com",
                                     "test",
-                                    3
-                            ),
+                                    3),
                             new Client (
                                     "Sebring",
                                     "Odilia",
                                     "osebringd@oaic.gov.au",
                                     "test",
-                                    4
-                            ),
+                                    4),
                             new Client (
                                     "Risson",
                                     "Otes",
                                     "orissone@blogtalkradio.com",
                                     "test",
-                                    0
-                            ),
+                                    0),
                             new Client (
                                     "Putman",
                                     "Evy",
                                     "eputmanf@amazon.com",
                                     "test",
-                                    1
-                            ),
+                                    1),
                             new Client (
                                     "Whitmarsh",
                                     "Mariquilla",
                                     "mwhitmarshg@deliciousdays.com",
                                     "test",
-                                    2
-                            ),
+                                    2),
                             new Client (
                                     "Azemar",
                                     "Josias",
                                     "jazemarh@oracle.com",
                                     "test",
-                                    3
-                            ),
+                                    3),
                             new Client (
                                     "Keneforde",
                                     "Martino",
                                     "mkenefordei@myspace.com",
                                     "test",
-                                    4
-                            ),
+                                    4),
                             new Client (
                                     "Wimlett",
                                     "Anderea",
                                     "awimlettj@mayoclinic.com",
                                     "test",
-                                    0
-                            ),
+                                    0),
                             new Client (
                                     "Petkovic",
                                     "Paulita",
                                     "ppetkovick@virginia.edu",
                                     "test",
-                                    1
-                            ),
+                                    1),
                             new Client (
                                     "Newcomen",
                                     "Maudie",
                                     "mnewcomenl@xrea.com",
                                     "test",
-                                    2
-                            ),
+                                    2),
                             new Client (
                                     "Onion",
                                     "Anabella",
                                     "aonionm@google.com.br",
                                     "test",
-                                    3
-                            ),
+                                    3),
                             new Client (
                                     "Inkpin",
                                     "Angela",
                                     "ainkpinn@istockphoto.com",
                                     "test",
-                                    4
-                            ),
+                                    4),
                             new Client (
                                     "Porter",
                                     "Annalise",
                                     "aportero@umn.edu",
                                     "test",
-                                    0
-                            )
+                                    0)
                     )
             );
 
@@ -250,25 +226,30 @@ public class ClientConfig {
             contratRepository.saveAll(
                     List.of(
                             new Contrat (
+                                    0,
                                     "contrat_cadre1",
-                                    5
+                                    0.05
                             ),
                             new Contrat(
+                                    1,
                                     "contrat_cadre2",
-                                    10
+                                    0.1
                             )
                             ,
                             new Contrat (
+                                    2,
                                     "contrat_cadre3",
-                                    15
+                                    0.15
                             ),
                             new Contrat (
+                                    3,
                                     "contrat_cadre4",
-                                    20
+                                    0.2
                             ),
                             new Contrat (
+                                    4,
                                     "contrat_cadre5",
-                                    25
+                                    0.25
                             )
                     )
             );
